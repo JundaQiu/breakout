@@ -17,10 +17,18 @@ function setup() {
  * de code in deze functie wordt meerdere keren per seconde
  * uitgevoerd door de p5 library, nadat de setup functie klaar is
  */
+var x = 0;
+var y = 0;
 function draw() {
-  // stel vulkleur in
-  fill(100, 100, 255);
-
+  clear();
+  x = x + 5;
+  y = y + 5;
+  fill(100, 300, 255);
+ 
   // teken een cirkel
-  ellipse(50,50,80,80);
+  ellipse(x,y,80,80);
+
+  if(y > 50){
+      y = y - 5;
+  }
 }
